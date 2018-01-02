@@ -11,11 +11,14 @@
     "build-client": "cross-env NODE_ENV=production browserify client/src/client.js | uglifyjs --compress warnings=false --mangle > client/dist/build.js"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "body-parser": "~1.18.2",
     "compression": "^1.7.1",
     "cookie-parser": "~1.4.3",
     "ejs": "~2.5.7",
     "express": "~4.15.5",
+    "lowdb": "^1.0.0",
+    "moment": "^2.20.1",
     "morgan": "~1.9.0",
     "vue": "^2.0.1"
   },
