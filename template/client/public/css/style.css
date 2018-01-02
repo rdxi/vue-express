@@ -1,0 +1,18 @@
+body {
+  padding: 20px;
+  margin: 0;
+  background-color: #fff;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.express-welcome {
+  text-align: center;
+}
+
+.express-welcome nav a {
+  margin-right: 10px;
+}
