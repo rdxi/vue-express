@@ -17,5 +17,5 @@
     }
   },
   "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run watch",
-  "skipInterpolation": "*.vue"
+  "skipInterpolation": ["client/**/*.vue", "node_modules/**"]
 }
