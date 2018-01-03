@@ -4,7 +4,7 @@ vue-express
 > vue.js + express.js app template
 
 ## Included
- - vue with example components
+ - vue + vue-router with example components
  - express server with routes and api
  - simple json based database (lowdb)
  - building\watching scripts and tools
