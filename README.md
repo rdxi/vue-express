@@ -1,4 +1,4 @@
-vue-express
+vue-express starter
 ==========
 
 > vue.js + express.js app template
