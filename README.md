@@ -17,6 +17,8 @@ Best way to install is from [vue-cli](https://github.com/vuejs/vue-cli).
 
 2) ```vue init rdxi/vue-express new-project``` create new vue-express app
 
+Done!
+
 (Or you can just download template manually and update package.json with new app name, description, author)
 
 ## Usage
