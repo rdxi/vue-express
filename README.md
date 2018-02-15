@@ -8,6 +8,10 @@ vue.js + express.js app starter
  - express server with routes and api
  - simple json based database (lowdb)
  - building\watching scripts and tools
+ - 
+ + Added to Login samples screen Express and Vue utilising 
+   Express (+Passport API) using axios Vuex store should be added using Passport API with axios for completeness 
+ + Added links from  Express to Vue  and  Vue to Express
 
 ## Installation
 
