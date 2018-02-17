@@ -6,12 +6,15 @@ vue.js + express.js app starter
 ## Included
  - vue + vue-router with example components
  - express server with routes and api
+ - vue authenticated session with vuex integrated with express
+ - vue express routers integrated login api
+ - vue express integrated authentication,routes,session
  - simple json based database (lowdb)
+ - signup & login using mysql knex bookshelf passport express-session express-mysqlstore vuex axios
  - building\watching scripts and tools
  - 
- + Added to Login samples screen Express and Vue utilising 
-   Express (+Passport API) using axios Vuex store should be added using Passport API with axios for completeness 
- + Added links from  Express to Vue  and  Vue to Express
+ + Added to Login samples screen Express and Vue joined vuex store with express passport & express session sample using axios 
+ + Added links from  Express to Vue  and  Vue to Express & check if user is loggedin , getuser info
 
 ## Installation
 
