@@ -53,6 +53,7 @@ module.exports = function(app, passport) {
   		failureFlash : true // allow flash messages
   	}));
 
+
   	// =====================================
   	// PROFILE SECTION =========================
   	// =====================================
@@ -64,7 +65,7 @@ module.exports = function(app, passport) {
   		});
   	});
       	// =====================================
-      	// AXIOS API RESP SECTION =========================
+      	// AXIOS API RESP SECTION =========================0
       	// =====================================
 
         app.post('/loginvue', passport.authenticate('local-login', {
@@ -73,16 +74,33 @@ module.exports = function(app, passport) {
           failureFlash : false // allow flash messages
         }));
 
-    app.get('/profilevue', isLoggedIn, function(req, res) {
-  		res.send({found:true,user : req.user,path:'/vueprofile' });// get the user out of session and pass to template
-
+              app.post('/profilevue', isLoggedIn, function(req, res) {
+          		res.send({found:true,user : req.user,path:'/vueprofile' });// get the user out of session and pass to template
+          	});
+            app.post('/loginvue', isLoggedIn, function(req, res) {
+            res.send({found:false,user : req.user,path:'/vuelogin' });// get the user out of session and pass to template
+          	});
+      app.get('/profilevue', function(req, res) {
+        res.send({found:true,user : req.user,path:'/vueprofile' });// get the user out of session and pass to template
   	});
-    app.get('/loginvue', isLoggedIn, function(req, res) {
-  		res.send({found:false,user : req.user,path:'/vuelogin' });// get the user out of session and pass to template
-
+    app.get('/loginvue', function(req, res) {
+    	res.send({found:false,user : req.user,path:'/vuelogin' });// get the user out of session and pass to template
   	});
+    app.post('/isLoggedIn',  function(req, res) {
+    	res.send({isLoggedIn:(req.user && req.isAuthenticated())?1:0 });// get the user out of session and pass to template
+  	});
+  
+    app.post('/getLoggedInUser', isLoggedIn, function(req, res) {
 
+      		res.send({user:req.user });// get the user out of session and pass to template
+      	});
+
+    // =====================================
   	// =====================================
+  	app.post('/logoutvue', function(req, res) {
+  		req.logout();
+  	});
+    // =====================================
   	// LOGOUT ==============================
   	// =====================================
   	app.get('/logout', function(req, res) {
